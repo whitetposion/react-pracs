@@ -7,25 +7,25 @@ export const MenuData = [
      },
      {
           title:"About",
-          url:"#",
+          url:"/about",
           cName:"nav-links",
           icon: "fa-solid fa-circle-info"
      },
      {
           title:"Service",
-          url:"#",
+          url:"/service",
           cName:"nav-links",
           icon: "fa-solid fa-briefcase"
      },
      {
           title:"Contact",
-          url:"#",
+          url:"/contact",
           cName:"nav-links",
           icon: "fa-solid fa-address-book"
      },
      {
           title:"Sign Up",
-          url:"#",
+          url:"/signup",
           cName:"nav-links-mobile",
      },
 ]

@@ -1,33 +1,34 @@
-import { Component } from "react"
+import { useState } from "react"
 import { MenuData } from "./MenuData";
+import { BrowserRouter as Router , Routes, Route, Link} from "react-router-dom"
 import "./Navbar.css"
-class Navbar extends Component {
-     state = {clicked:false};
-     handleClick = ()=> {
-          this.setState({clicked:!this.state.clicked})
-     }
+const Navbar =()=> {
+     const [comm, usecomm] = useState(false);
+     const handleClick = ()=> {
+          usecomm(!comm);
+     };
 
-     render() {
-          return (
+     return (
                <nav className= "NavbarItems">
                     <h1 className= "logo">
                          React <i className = "fab fa-react"></i>
                     </h1>
-                    <div className= "menu-icons" onClick={this.handleClick}>
-                         <i className={this.state.clicked ? "fas fa-times" : " fas fa-bars"}></i>
+                    <div className= "menu-icons" onClick={handleClick}>
+                         <i className={comm ? "fas fa-times" : " fas fa-bars"}></i>
                     </div>
-                    <ul className= {this.state.clicked ? "nav-menu active": "nav-menu"}>
+                    <ul className= {comm ? "nav-menu active": "nav-menu"}>
                          {MenuData.map((item, index) =>{
                               return (
                                    <li key={index}>
                                         <a href={item.url} className={item.cName}><i className={item.icon}></i>{item.title}</a>
                                    </li>
+                                   
+                                   
                               )
                          })}
                     </ul>
                </nav>
           );
-     }
-}
-
+     
+};
 export default Navbar

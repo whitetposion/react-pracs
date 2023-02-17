@@ -35,12 +35,13 @@
      text-align: center;
      justify-content: end;
      
+     
 }
 
 .nav-links {
      text-decoration: none;
      color: #fff;
-     padding:0.7rem , 1rem;
+     padding:0.7rem , 1rem , 10rem;
      white-space: nowrap;
 }
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { MenuData } from "./MenuData";
-import { BrowserRouter as Router , Routes, Route, Link} from "react-router-dom"
+//import { BrowserRouter as Router , Routes, Route, Link} from "react-router-dom"
 import "./Navbar.css"
 const Navbar =()=> {
      const [comm, usecomm] = useState(false);
